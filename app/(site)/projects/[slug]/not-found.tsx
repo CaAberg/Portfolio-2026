@@ -16,7 +16,7 @@ export default function ProjectNotFound() {
         That project does not exist or may have been moved.
       </p>
       <p className="mt-6">
-        <TextLink href="/#work">Return to work</TextLink>
+        <TextLink href="/#projects">Return to projects</TextLink>
       </p>
     </Container>
   );

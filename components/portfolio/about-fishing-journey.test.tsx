@@ -1,6 +1,6 @@
 import { AboutFishingJourney } from "@/components/portfolio/about-fishing-journey";
 import { journeyCards } from "@/lib/about-journey-cards";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 
@@ -21,12 +21,12 @@ describe("AboutFishingJourney", () => {
       screen.getByRole("button", { name: /reel in the first chapter/i }),
     );
 
-    expect(
-      await screen.findByRole("heading", {
-        level: 3,
-        name: journeyCards[0].title,
-      }),
-    ).toBeInTheDocument();
+    const heading = await screen.findByRole("heading", {
+      level: 3,
+      name: journeyCards[0].title,
+    });
+    expect(heading).toBeInTheDocument();
+    await waitFor(() => expect(heading).toHaveFocus());
   });
 
   it("advances to the next chapter when clicking reel again", async () => {
@@ -40,12 +40,12 @@ describe("AboutFishingJourney", () => {
       screen.getByRole("button", { name: /reel in the next chapter/i }),
     );
 
-    expect(
-      await screen.findByRole("heading", {
-        level: 3,
-        name: journeyCards[1].title,
-      }),
-    ).toBeInTheDocument();
+    const heading = await screen.findByRole("heading", {
+      level: 3,
+      name: journeyCards[1].title,
+    });
+    expect(heading).toBeInTheDocument();
+    await waitFor(() => expect(heading).toHaveFocus());
   });
 
   it("activates a step when choosing a step button", async () => {
@@ -58,12 +58,12 @@ describe("AboutFishingJourney", () => {
       }),
     );
 
-    expect(
-      await screen.findByRole("heading", {
-        level: 3,
-        name: journeyCards[3].title,
-      }),
-    ).toBeInTheDocument();
+    const heading = await screen.findByRole("heading", {
+      level: 3,
+      name: journeyCards[3].title,
+    });
+    expect(heading).toBeInTheDocument();
+    await waitFor(() => expect(heading).toHaveFocus());
   });
 
   it("disables the reel after the last chapter is shown", async () => {
@@ -98,11 +98,11 @@ describe("AboutFishingJourney", () => {
     reel.focus();
     await user.keyboard("{Enter}");
 
-    expect(
-      await screen.findByRole("heading", {
-        level: 3,
-        name: journeyCards[0].title,
-      }),
-    ).toBeInTheDocument();
+    const heading = await screen.findByRole("heading", {
+      level: 3,
+      name: journeyCards[0].title,
+    });
+    expect(heading).toBeInTheDocument();
+    await waitFor(() => expect(heading).toHaveFocus());
   });
 });

@@ -2,34 +2,37 @@ import type { Project } from "@/types/project";
 
 const projects: Project[] = [
   {
-    slug: "project-1",
-    title: "Project 1",
-    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    slug: "tackleboxed",
+    title: "Tackleboxed: an online store for fishing equipment",
+    summary: "E-commerce website for a fishing store.",
+    description:
+      "I designed and developed the website for a fishing store. The website is built with Next.js and Tailwind CSS. This project was made to learn about supabase and how to use it to handle data.",
     highlights: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Based on nextjs and tailwindcss.",
+      "Supabase Database & Storage",
+      "Responsive Design",
+      "Shopping Cart Functionality",
+      "SEO Optimized",
     ],
+    href: "https://tackleboxed2-0.vercel.app",
+    hrefLabel: "View website",
   },
   {
-    slug: "project-2",
-    title: "Project 2",
-    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    slug: "fisherDB",
+    title: "FisherDB: a 'reddit clone' project",
+    summary:
+      "A reddit clone project that lets people create, post and comment on posts.",
+    description:
+      "A reddit clone project that lets people create, post and comment on posts. This project was made to learn about authentication, comments and posts.",
     highlights: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Based on nextjs and tailwindcss.",
+      "Supabase Database & Storage",
+      "Responsive Design",
+      "Authentication",
+      "Comment and post",
     ],
-  },
-  {
-    slug: "project-3",
-    title: "Project 3",
-    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    highlights: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    ],
+    href: "https://fisherdb.vercel.app",
+    hrefLabel: "View website",
   },
 ];
 

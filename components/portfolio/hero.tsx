@@ -19,7 +19,9 @@ export function Hero({ className }: HeroProps) {
         <p className="mt-4 lg:mt-8 mr-4 max-w-lg text-l leading-relaxed text-muted-foreground">
           I design and develop websites that look good and are simple to use, no
           matter who you are.
-          <p>keep scrolling to see what I can do for you!</p>
+        </p>
+        <p className="mt-4 lg:mt-8 mr-4 max-w-lg text-l leading-relaxed text-muted-foreground">
+          keep scrolling to see what I can do for you!
         </p>
       </Container>
     </div>

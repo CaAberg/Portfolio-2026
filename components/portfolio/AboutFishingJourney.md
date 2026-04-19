@@ -1,6 +1,6 @@
 # AboutFishingJourney
 
-Client widget: a decorative fishing SVG (`aria-hidden`) plus a **card slot** above it. Cards are driven by [`lib/about-journey-cards.ts`](../../lib/about-journey-cards.ts).
+Client widget: one bordered panel with the **story** on the left (`min-h-96`, scrollable body) and a **right column** (stacked below on narrow screens) with the fishing SVG (`aria-hidden`), reel button, and vertical **journey step** list. Cards are driven by [`lib/about-journey-cards.ts`](../../lib/about-journey-cards.ts).
 
 ## Controls
 
@@ -12,6 +12,7 @@ Client widget: a decorative fishing SVG (`aria-hidden`) plus a **card slot** abo
 
 - Region label comes from the first `sr-only` span (`aria-labelledby`).
 - Step changes are mirrored in an `aria-live="polite"` paragraph (`sr-only`) with text like `Step 2 of 5: …`.
+- After activating the reel or a step button, focus moves to the chapter `h3` (`tabIndex={-1}`) so users land on the new story without tabbing back from the controls.
 
 ## Motion
 

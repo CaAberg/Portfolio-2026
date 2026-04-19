@@ -6,7 +6,11 @@ const headingId = "about-heading";
 
 export function AboutSection() {
   return (
-    <Section id="about" aria-labelledby={headingId} className="bg-muted/30">
+    <Section
+      id="about"
+      aria-labelledby={headingId}
+      className="bg-muted/30 min-h-dvh"
+    >
       <Container>
         <h2
           id={headingId}

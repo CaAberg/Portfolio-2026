@@ -19,7 +19,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
     >
       <h3 className="text-lg font-semibold text-foreground">
         <Link
-          className="underline decoration-transparent decoration-2 underline-offset-4 transition-colors hover:decoration-link-underline focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+          className="underline decoration-transparent decoration-2 underline-offset-4 transition-colors hover:decoration-link-underline focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
           href={`/projects/${project.slug}`}
         >
           {project.title}
